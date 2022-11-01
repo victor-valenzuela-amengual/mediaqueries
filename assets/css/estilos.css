@@ -3,19 +3,15 @@ body {
     font-weight: 700px;
     display: grid;
     gap: 5px;
-    grid-template-columns: 15%;    
-    grid-template-areas: "n n"       
+    grid-template-columns: 15%;
+    grid-template-areas: "n n"
         "h h"
         "m m"
-        "f f";        
+        "f f";
 }
 
-
-
-
 header {
-    grid-area: h;    
-    /* background-color: tomato */
+    grid-area: h;
 }
 
 nav {
@@ -26,8 +22,6 @@ nav {
 
 main {
     grid-area: m;
-    /* border: 1px solid yellowgreen; */
-    /* background-color: yellowgreen */
 }
 
 footer {
@@ -35,28 +29,32 @@ footer {
 
 }
 
+/***********************Flex menu navegación********************/
 .flex {
     display: flex;
     flex-direction: column;
-    align-items: center;    
+    align-items: center;
 }
 
 
 .flex .header {
     margin-top: 0px;
-    font-weight: bold;    
-    
+    font-weight: bold;
+
 }
-.flex .header .fa-solid{    
+
+.flex .header .fa-solid {
     padding-right: 4px;
 }
 
-.flex .header span{    
-    display: contents;    
+.flex .header span {
+    display: contents;
+
 }
 
-.flex .header span i {        
-    padding-left: 16px;
+.flex .header span i {
+    padding-left: 64px;
+    align-self: flex-end;
 }
 
 .flex .item {
@@ -64,43 +62,50 @@ footer {
     display: none;
 }
 
+/********************Flex fotos autos************************/
 .flex-main {
     display: flex;
-    flex-flow: row wrap;
-    align-items: flex-start;
+    flex-flow: column nowrap;
+    align-items: center;
     gap: 5px;
 }
+.flex-main div {
+    border: 1px solid red;
+    width: 100%;
+}
 
-.flex-main p {  
+.flex-main div img {    
+    width: 100%; 
+    /* height: 100%;    */
+}
+
+.flex-main p {
     text-align: center;
     margin: 0px 0px;
-    
-}
-.flex-main form {        
-    margin: 5px 0px;
-    text-align: center;    
+
 }
 
-/* .flex-main button {        
-    width: 75%;
-    
-} */
+.flex-main form {
+    margin: 5px 0px;
+    text-align: center;
+}
+
 img {
     height: 100px;
+
 }
 
 div button {
-    background-color:#01579B;
+    background-color: #01579B;
     color: white;
-    border-radius:5px;    
+    border-radius: 5px;
     border-color: blue;
     /* height: 30px; */
-    width: 50%;    
+    width: 50%;
 }
 
 #orden {
     width: 100%;
-
 }
 
 /*Inicial*/
@@ -111,15 +116,24 @@ div button {
             "n m"
             "f f";
     }
-    .flex .item{
-        display:flex;                 
-    }
- 
-    .flex .header span{    
-        display: none;    
+
+    .flex .item {
+        display: flex;
     }
 
-    /* .flex .header span i {        
-        padding-left: 8px;
+    .flex .header span {
+        display: none;
+    }
+
+    .flex-main {
+        flex-flow: row wrap;        
+    }
+    .flex-main div {        
+        width: auto;
+    }
+
+    /* .flex-main img {    
+        height: 100%; 
+        width: 100%;   
     } */
 }
