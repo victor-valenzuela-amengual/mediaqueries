@@ -1,24 +1,20 @@
 body {
+    font-family: "Raleway";
+    font-weight: 700px;
     display: grid;
     gap: 5px;
-    grid-template-columns: 15%;
+    grid-template-columns: 15%;    
     grid-template-areas: "n n"       
         "h h"
         "m m"
-        "f f";
+        "f f";        
 }
 
-@media (min-width:576px) {
-    body {
-        grid-template-columns: 15% 1fr;
-        grid-template-areas: "n h"
-            "n m"
-            "f f";
-    }
-}
+
+
 
 header {
-    grid-area: h;
+    grid-area: h;    
     /* background-color: tomato */
 }
 
@@ -42,17 +38,30 @@ footer {
 .flex {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center;    
 }
+
 
 .flex .header {
     margin-top: 0px;
+    font-weight: bold;    
+    
+}
+.flex .header .fa-solid{    
+    padding-right: 4px;
+}
 
+.flex .header span{    
+    display: contents;    
+}
+
+.flex .header span i {        
+    padding-left: 16px;
 }
 
 .flex .item {
     margin-bottom: 0px;
-
+    display: none;
 }
 
 .flex-main {
@@ -92,4 +101,25 @@ div button {
 #orden {
     width: 100%;
 
+}
+
+/*Inicial*/
+@media (min-width:576px) {
+    body {
+        grid-template-columns: 15% 1fr;
+        grid-template-areas: "n h"
+            "n m"
+            "f f";
+    }
+    .flex .item{
+        display:flex;                 
+    }
+ 
+    .flex .header span{    
+        display: none;    
+    }
+
+    /* .flex .header span i {        
+        padding-left: 8px;
+    } */
 }
