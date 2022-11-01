@@ -1,0 +1,95 @@
+body {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 15%;
+    grid-template-areas: "n n"       
+        "h h"
+        "m m"
+        "f f";
+}
+
+@media (min-width:576px) {
+    body {
+        grid-template-columns: 15% 1fr;
+        grid-template-areas: "n h"
+            "n m"
+            "f f";
+    }
+}
+
+header {
+    grid-area: h;
+    /* background-color: tomato */
+}
+
+nav {
+    grid-area: n;
+    background-color: #01579B;
+    color: white;
+}
+
+main {
+    grid-area: m;
+    /* border: 1px solid yellowgreen; */
+    /* background-color: yellowgreen */
+}
+
+footer {
+    grid-area: f;
+
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex .header {
+    margin-top: 0px;
+
+}
+
+.flex .item {
+    margin-bottom: 0px;
+
+}
+
+.flex-main {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.flex-main p {  
+    text-align: center;
+    margin: 0px 0px;
+    
+}
+.flex-main form {        
+    margin: 5px 0px;
+    text-align: center;    
+}
+
+/* .flex-main button {        
+    width: 75%;
+    
+} */
+img {
+    height: 100px;
+}
+
+div button {
+    background-color:#01579B;
+    color: white;
+    border-radius:5px;    
+    border-color: blue;
+    /* height: 30px; */
+    width: 50%;    
+}
+
+#orden {
+    width: 100%;
+
+}
